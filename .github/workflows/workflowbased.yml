@@ -1,0 +1,25 @@
+name: Workflow run type trigger
+
+on:
+  workflow_run:
+    workflows: ["Push type Workflow"]
+    types: [requested]
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Stage
+        run: echo "Build Successfull"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Stage
+        run: echo "Testing Successfull"
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Stage
+        run: echo "Deployed Successfully"
