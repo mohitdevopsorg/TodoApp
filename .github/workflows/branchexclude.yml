@@ -1,8 +1,8 @@
-name: Push type Workflow
+name: Branch exclude type Workflow
 
 on:
   push:
-    branches:
+    branches-ignore:
       - main
     
 

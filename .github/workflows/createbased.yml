@@ -1,10 +1,6 @@
-name: Push type Workflow
+name: Create Based Workflow
 
-on:
-  push:
-    branches:
-      - main
-    
+on: create
 
 jobs:
   build:

@@ -1,10 +1,11 @@
-name: Push type Workflow
+name: Workflow run type trigger
 
 on:
-  push:
+  workflow_run:
+    workflows: ["Push type Workflow"]
+    types: [requested]
     branches:
       - main
-    
 
 jobs:
   build:
