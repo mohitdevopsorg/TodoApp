@@ -1,4 +1,4 @@
-name: Push type Workflow
+name: Create Based Workflow
 
 on: create
 
