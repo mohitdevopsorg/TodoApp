@@ -1,0 +1,22 @@
+name: Schedule type Workflow
+
+on:
+  schedule:
+    - cron: '*/20 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Stage
+        run: echo "Build Successfull"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Stage
+        run: echo "Testing Successfull"
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Stage
+        run: echo "Deployed Successfully"
