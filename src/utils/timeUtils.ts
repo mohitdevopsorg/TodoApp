@@ -2,8 +2,12 @@ const MS_IN_MINUTE = 60 * 1000;
 const MS_IN_HOUR = 60 * MS_IN_MINUTE;
 const MS_IN_DAY = 24 * MS_IN_HOUR;
 
-const getLocale = () => navigator.language || "en-US";
-
+const getLocale = (): string {
+  if (typeof navigator !== "undefined" && navigator.language) {
+    return navigator.language;
+  }
+  return "en-US";
+}
 export const isSameDay = (date1: Date, date2: Date): boolean =>
   date1.getFullYear() === date2.getFullYear() &&
   date1.getMonth() === date2.getMonth() &&
