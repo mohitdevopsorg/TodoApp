@@ -1,0 +1,26 @@
+name: Push-featureBranch Workflow
+
+on:
+  push:
+    branches:
+      - feature
+    branches-ignore:
+      - main
+    
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Stage
+        run: echo "Build Successfull"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Stage
+        run: echo "Testing Successfull"
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Stage
+        run: echo "Deployed Successfully"
